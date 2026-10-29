@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="d-flex justify-content-center align-items-center" style="height: 60vh;">
+    <div class="result-card p-5 shadow rounded text-center">
+        <h2 class="mb-4">Classification Result</h2>
+        <p>🎯 Genre: <strong>{{ genre }}</strong></p>
+
+        <!-- Predict Another -->
+        <a href="{{ url_for('upload') }}" id="predictAnotherBtn" class="btn btn-primary mt-4">Upload Another</a>
+        <a href="{{ url_for('dashboard', filename=filename) }}" id="dashboardBtn" class="btn mt-3">View Analysis</a>
+    </div>
+</div>
+{% endblock %}

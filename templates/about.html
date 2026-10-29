@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="about-section p-5 shadow rounded" style="color: white; ">
+        <h2 class="mb-4">About the Music Genre Classifier</h2>
+        <p>
+            🎵 Welcome to the <strong>Music Genre Classifier</strong>! This web app allows you to upload an audio file and uses a deep learning model to predict the genre of the music.  
+            Our model is trained on the <strong>GTZAN dataset</strong>, which includes 10 different genres such as rock, pop, jazz, blues, and more.
+        </p>
+        
+        <h4 class="mt-4">🔎 How It Works:</h4>
+        <ul>
+            <li>Upload an audio file (MP3 format).</li>
+            <li>The app extracts key audio features using <strong>Librosa</strong>.</li>
+            <li>The features are fed into a deep learning model to predict the genre.</li>
+            <li>The result shows the predicted genre and confidence score!</li>
+        </ul>
+
+        <h4 class="mt-4">🚀 Why This App is Special:</h4>
+        <ul>
+            <li>🎯 High accuracy using advanced deep learning techniques.</li>
+            <li>⚖️ Balanced class distribution using SMOTE.</li>
+            <li>📈 Interactive dashboard to visualize audio analysis.</li>
+            <li>🌙 Light and dark mode support for better user experience.</li>
+        </ul>
+
+
+        <!-- Genre Description Section -->
+        <h4 class="mt-5">🎶 Supported Genres:</h4>
+        <div class="genre-list mt-3">
+            <div class="row">
+                <div class="col-md-6">
+                    <ul>
+                        <li><strong>Blues:</strong> A soulful genre with roots in African-American history, featuring deep lyrics and guitar-based instrumentation.</li>
+                        <li><strong>Classical:</strong> Traditional music often performed by orchestras with complex harmonies and instrumentals.</li>
+                        <li><strong>Country:</strong> Storytelling-focused music often featuring guitars, fiddles, and heartfelt lyrics.</li>
+                        <li><strong>Disco:</strong> Dance-oriented music with strong basslines and rhythmic beats, popular in the 1970s.</li>
+                        <li><strong>Hip-Hop:</strong> A rhythmic and rhyming style that includes rapping and strong beats.</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul>
+                        <li><strong>Jazz:</strong> A genre known for improvisation, swing rhythms, and complex harmonies.</li>
+                        <li><strong>Metal:</strong> Loud and aggressive music featuring distorted guitars and intense drumming.</li>
+                        <li><strong>Pop:</strong> Catchy and widely appealing music, often characterized by strong melodies and repetitive hooks.</li>
+                        <li><strong>Reggae:</strong> A Jamaican genre with offbeat rhythms and socially conscious lyrics.</li>
+                        <li><strong>Rock:</strong> Guitar-driven music with diverse influences, ranging from soft ballads to hard rock anthems.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

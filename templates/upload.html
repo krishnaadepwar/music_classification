@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="d-flex justify-content-center align-items-center" style="height: 60vh;">
+    <div class="text-center slide-in position-relative">
+        <h2 class="mb-4" style="color: white;">Upload Audio File</h2>
+        <form method="POST" action="{{ url_for('result') }}" enctype="multipart/form-data" class="p-4 border rounded shadow bg-white" id="uploadForm">
+            <div class="form-group">
+                <input type="file" class="form-control-file" name="file" required>
+            </div>
+            <button type="submit" id="predictBtn" class="btn btn-success mt-3">Upload</button>
+            <div class="spinner-border text-primary mt-3" role="status" id="loadingSpinner" style="display: none;">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </form>
+        {% if error %}
+            <p class="text-danger mt-3 fade-in">{{ error }}</p>
+        {% endif %}
+    </div>
+</div>
+
+<script>
+    document.getElementById('uploadForm').addEventListener('submit', function() {
+        document.getElementById('predictBtn').disabled = true;
+        document.getElementById('loadingSpinner').style.display = 'block';
+    });
+</script>
+{% endblock %}

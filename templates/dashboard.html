@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">🎵 Audio Analysis Dashboard</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='waveform.png') }}" class="img-fluid mb-4" alt="Waveform">
+        </div>
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='spectrogram.png') }}" class="img-fluid mb-4" alt="Spectrogram">
+        </div>
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='mfcc.png') }}" class="img-fluid mb-4" alt="MFCCs">
+        </div>
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='zcr.png') }}" class="img-fluid mb-4" alt="Zero-Crossing Rate">
+        </div>
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='chroma.png') }}" class="img-fluid mb-4" alt="Chroma Features">
+        </div>
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='spectral_contrast.png') }}" class="img-fluid mb-4" alt="Spectral Contrast">
+        </div>
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='spectral_flatness.png') }}" class="img-fluid mb-4" alt="Spectral Flatness">
+        </div>
+        
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='tonnetz.png') }}" class="img-fluid mb-4" alt="Tonal Centroid">
+        </div>
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='rms.png') }}" class="img-fluid mb-4" alt="RMS Energy">
+        </div>
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='tempo.png') }}" class="img-fluid mb-4" alt="Tempo Histogram">
+        </div>
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='harmonic_percussive.png') }}" class="img-fluid mb-4" alt="Harmonic & Percussive Components">
+        </div>
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='spectral_rolloff.png') }}" class="img-fluid mb-4" alt="Spectral Roll-off">
+        </div>
+        
+    </div>
+    <div class="text-center mt-4">
+        <a href="{{ url_for('upload') }}" id="predictAnotherBtn" class="btn btn-primary">Upload Another</a>
+    </div>
+</div>
+{% endblock %}

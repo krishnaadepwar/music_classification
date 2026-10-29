@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Genre Classifier</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="{{ url_for('index') }}">🎧 Music Genre Classifier</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('upload') }}">Upload</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('about') }}">About</a></li>
+                <li class="nav-item">
+                    <button class="btn btn-outline-light ml-3" id="theme-toggle">🌙</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5 fade-in">
+        {% block content %}{% endblock %}
+    </div>
+
+    
+    
+
+    <script>
+        // Theme Toggle Logic
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        // Load theme from localStorage
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            themeToggle.innerText = '☀️';
+        } else {
+            body.classList.remove('dark-mode');
+            themeToggle.innerText = '🌙';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                themeToggle.innerText = '☀️';
+            } else {
+                localStorage.setItem('theme', 'light');
+                themeToggle.innerText = '🌙';
+            }
+        });
+    </script>
+</body>
+</html>

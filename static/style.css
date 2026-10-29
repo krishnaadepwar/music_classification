@@ -1,0 +1,284 @@
+/* General Styling */
+body {
+    background-color: #f4f4f9;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(90deg, #007bff, #00c6ff);
+}
+
+body.dark-mode .navbar {
+    background: linear-gradient(90deg, #1e1e1e, #3a3a3a);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.navbar-brand, .nav-link {
+    color: white !important;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 80vh;
+    background: linear-gradient(135deg, #007bff 0%, #00c6ff 100%);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+body.dark-mode .hero-section {
+    background: linear-gradient(135deg, #1e1e1e 0%, #3a3a3a 100%);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Result Card */
+.result-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode .result-card {
+    background-color: #1e1e1e;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.8);
+}
+
+
+
+/* Input Field */
+.form-control-file {
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+body.dark-mode .form-control-file {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+body.dark-mode .form-control-file::file-selector-button {
+    background-color: #444;
+    color: #fff;
+}
+
+body.dark-mode .form-control-file:focus {
+    border-color: #00c6ff;
+    outline: none;
+}
+
+/* Progress Bar */
+.progress-bar {
+    background: linear-gradient(90deg, #28a745, #5cb85c);
+    transition: width 0.5s ease;
+}
+
+body.dark-mode .progress-bar {
+    background: linear-gradient(90deg, #4caf50, #388e3c);
+}
+
+/* Spinner */
+.spinner-border {
+    color: #007bff;
+}
+
+body.dark-mode .spinner-border {
+    color: #ffffff;
+}
+
+
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 0.8s ease;
+}
+
+.slide-in {
+    animation: slideIn 0.8s ease;
+}
+
+.zoom-in {
+    transition: transform 0.3s ease;
+}
+
+.zoom-in:hover {
+    transform: scale(1.1);
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+
+/* Center Align Content */
+.table td,
+.table th {
+    text-align: center;
+}
+
+/* Get Started Button */
+#getStartedBtn {
+    background: linear-gradient(to right, #007bff, #00c6ff) !important;
+    color: #fff !important;
+    padding: 12px 30px !important;
+    font-size: 1.1rem !important;
+    border: none !important;
+    border-radius: 30px !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
+    transition: all 0.3s ease !important;
+}
+
+#getStartedBtn:hover {
+    background: linear-gradient(to right, #0056b3, #0095ff) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Dark Mode - Get Started Button */
+body.dark-mode #getStartedBtn {
+    background: linear-gradient(to right, #444, #666) !important;
+    color: #f0f0f0 !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5) !important;
+}
+
+body.dark-mode #getStartedBtn:hover {
+    background: linear-gradient(to right, #555, #777) !important;
+}
+
+/* Predict Button with Gradient */
+#predictBtn {
+    background: linear-gradient(to right, #007bff, #00c6ff) !important;
+    color: #fff !important;
+    padding: 10px 25px !important;
+    border: none !important;
+    border-radius: 25px !important;
+    font-size: 1rem !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
+    transition: all 0.3s ease !important;
+}
+
+#predictBtn:hover {
+    background: linear-gradient(to right, #0056b3, #0095ff) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Dark Mode - Predict Button */
+body.dark-mode #predictBtn {
+    background: linear-gradient(to right, #444, #666) !important;
+    color: #f0f0f0 !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5) !important;
+}
+
+body.dark-mode #predictBtn:hover {
+    background: linear-gradient(to right, #555, #777) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Predict Another Button (Same as Get Started) */
+#predictAnotherBtn {
+    background: linear-gradient(to right, #007bff, #00c6ff) !important;
+    color: #fff !important;
+    padding: 12px 30px !important;
+    font-size: 1.1rem !important;
+    border: none !important;
+    border-radius: 30px !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
+    transition: all 0.3s ease !important;
+}
+
+#predictAnotherBtn:hover {
+    background: linear-gradient(to right, #0056b3, #0095ff) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Dark Mode - Predict Another Button */
+body.dark-mode #predictAnotherBtn {
+    background: linear-gradient(to right, #444, #666) !important;
+    color: #f0f0f0 !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5) !important;
+}
+
+body.dark-mode #predictAnotherBtn:hover {
+    background: linear-gradient(to right, #555, #777) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Dashboard Button - Match Get Started Button */
+#dashboardBtn {
+    background: linear-gradient(to right, #007bff, #00c6ff) !important;
+    color: #fff !important;
+    padding: 12px 30px !important;
+    font-size: 1.1rem !important;
+    border: none !important;
+    border-radius: 30px !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
+    transition: all 0.3s ease !important;
+}
+
+#dashboardBtn:hover {
+    background: linear-gradient(to right, #0056b3, #0095ff) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Dark Mode - Dashboard Button */
+body.dark-mode #dashboardBtn {
+    background: linear-gradient(to right, #444, #666) !important;
+    color: #f0f0f0 !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5) !important;
+}
+
+body.dark-mode #dashboardBtn:hover {
+    background: linear-gradient(to right, #555, #777) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Background Image */
+body {
+    background: url("/static/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Dark Mode Background */
+body.dark-mode {
+    background: url("/static/background-dark.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #e0e0e0;
+}
+
+/* Content Box with Transparent Background */
+.content-box {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode Content Box */
+body.dark-mode .content-box {
+    background: rgba(30, 30, 30, 0.9);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}

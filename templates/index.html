@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="hero-section d-flex justify-content-center align-items-center slide-in">
+    <div class="text-center">
+        <h1 class="display-4">🎵 Music Genre Classifier</h1>
+        <p class="lead">Upload an audio file and let AI predict the genre!</p>
+        <a href="{{ url_for('upload') }}" id="getStartedBtn" class="btn btn-gradient mt-3 btn-lg">Get Started</a>
+    </div>
+</div>
+{% endblock %}
